@@ -30,12 +30,9 @@ class AlbumList extends Component {
 
 const styles = {
   containerStyle: {
-    justifyContent: 'center',
-    alignItems: 'center'
+    //justifyContent: 'center',
+    //alignItems: 'center'
   },
-  dummyTextStyle: {
-    fontSize: 54
-  }
 };
 
 export default AlbumList;
