@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, Text } from 'react-native';
+import { View, Image, Text, Button, Alert } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 
@@ -12,6 +12,11 @@ const AlbumDetail = ({ album }) => {
     titleStyle,
     artworkStyle
   } = styles;
+
+  const onPressLearnMore = () => {
+    Alert.alert(title + ' clicked!');
+    console.log(title + ' clicked.');
+  };
 
   return (
     <Card>
@@ -27,10 +32,19 @@ const AlbumDetail = ({ album }) => {
           <Text>{artist}</Text>
         </View>
       </CardSection>
+
       <CardSection>
         <Image
           style={artworkStyle}
           source={{ uri: image }}
+        />
+      </CardSection>
+
+      <CardSection>
+        <Button
+          onPress={onPressLearnMore}
+          title="Learn more"
+          color="#841584"
         />
       </CardSection>
     </Card>

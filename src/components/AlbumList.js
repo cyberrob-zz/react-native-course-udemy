@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { ScrollView } from 'react-native';
 import axios from 'axios';
 import AlbumDetail from './AlbumDetail';
 
@@ -21,18 +21,11 @@ class AlbumList extends Component {
     console.log(this.state);
 
     return (
-      <View style={styles.containerStyle}>
+      <ScrollView>
         {this.renderAlbums()}
-      </View>
+      </ScrollView>
     );
   }
 }
-
-const styles = {
-  containerStyle: {
-    //justifyContent: 'center',
-    //alignItems: 'center'
-  },
-};
 
 export default AlbumList;
