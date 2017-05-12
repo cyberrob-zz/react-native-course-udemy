@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Image, Text, Button, Alert } from 'react-native';
+import { View, Image, Text } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import Button from './Button';
 
 const AlbumDetail = ({ album }) => {
   // extract these properties from album that from props
@@ -12,11 +13,6 @@ const AlbumDetail = ({ album }) => {
     titleStyle,
     artworkStyle
   } = styles;
-
-  const onPressLearnMore = () => {
-    Alert.alert(title + ' clicked!');
-    console.log(title + ' clicked.');
-  };
 
   return (
     <Card>
@@ -41,11 +37,7 @@ const AlbumDetail = ({ album }) => {
       </CardSection>
 
       <CardSection>
-        <Button
-          onPress={onPressLearnMore}
-          title="Learn more"
-          color="#841584"
-        />
+        <Button />
       </CardSection>
     </Card>
   );
